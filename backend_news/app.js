@@ -60,7 +60,7 @@ passport.use(
     new GoogleStrategy({
         clientID: process.env.GOOGLE_CLIENT_ID,
         clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-        callbackURL: `http://localhost:5000/auth/google/callback`, // Dynamic callback URL
+        callbackURL: `https://news-app-4h7w.onrender.com/auth/google/callback`, // Dynamic callback URL
         scope: ['profile', 'email'],
     },
     async (token, tokenSecret, profile, done) => {
@@ -103,11 +103,11 @@ app.get('/auth/google', passport.authenticate('google', {
 }));
 
 app.get('/auth/google/callback', passport.authenticate('google', {
-    successRedirect: 'http://localhost:5000',
-    failureRedirect: 'http://localhost:5000'
+    successRedirect: 'https://news-app-4h7w.onrender.com',
+    failureRedirect: 'https://news-app-4h7w.onrender.com'
 }), (req, res) => {
     console.log('Authentication successful, user:', req.user);
-    res.redirect('http://localhost:5000');
+    res.redirect('https://news-app-4h7w.onrender.com');
 });
 
 app.get('/auth/logout', (req, res) => {

@@ -17,13 +17,13 @@ const Navbar = () => {
     };
 
     const loginWithGoogle = () => {
-        window.location.href = `http://localhost:5000/auth/google/callback`;
+        window.location.href = `https://news-app-4h7w.onrender.com/auth/google/callback`;
         handleExploreClick();
     };
 
     const handleLogout = async () => {
         try {
-            await axios.get(`http://localhost:5000/auth/logout`, { withCredentials: true });
+            await axios.get(`https://news-app-4h7w.onrender.com/auth/logout`, { withCredentials: true });
             localStorage.removeItem('user'); // Clear any user data from local storage
             dispatch(logout()); // Dispatch the logout action
             window.location.href = '/';
