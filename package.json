@@ -1,0 +1,42 @@
+{
+  "name": "googlenews",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon backend_news/app.js",
+    "start": "npm install && nodemon backend_news/app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "axios": "^1.7.2",
+    "body-parser": "^1.20.2",
+    "buffer": "^6.0.3",
+    "bullmq": "^5.10.3",
+    "cheerio": "^1.0.0-rc.12",
+    "connect-mongo": "^5.1.0",
+    "cookie-session": "^2.1.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-async-handler": "^1.2.0",
+    "express-session": "^1.18.0",
+    "google-news-scraper": "^1.2.3",
+    "i": "^0.3.7",
+    "ioredis": "^5.4.1",
+    "lodash": "^4.17.21",
+    "mongoose": "^8.5.1",
+    "node-cron": "^3.0.3",
+    "nodemon": "^3.1.4",
+    "npm": "^10.8.2",
+    "p-limit": "^6.1.0",
+    "p-queue": "^8.0.1",
+    "passport": "^0.7.0",
+    "passport-google-oauth2": "^0.2.0",
+    "passport-google-oauth20": "^2.0.0",
+    "socket.io": "^4.7.5"
+  }
+}
